@@ -9,3 +9,13 @@ ACLP heavily relies on built-in SpeechRecognizer library to do speech to text op
 
 # Future Goals
 The purpose and goal of ACLP is to... 
+
+# Motivation
+
+# How to use?
+
+# Contribute
+To join the team and contribute please reach out on virajpatel325@gmail.com with suject "ACLPKotlin Contribution Request".
+
+#License
+ACLP is protcted under MIT License, check the "LICENSE" file for more information.
