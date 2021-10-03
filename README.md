@@ -22,4 +22,6 @@ ACLP is protcted under MIT License, check the "LICENSE" file for more informatio
 
 # Contributors
 Viraj Patel(Lead): The Ohio State University
+
+
 <a href="https://github.com/viraj325"><img src="https://avatars.githubusercontent.com/u/37918393?v=4" title="Viraj Patel(Lead)" width="60" height="60"></a>
