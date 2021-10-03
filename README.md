@@ -8,7 +8,7 @@ ACLP allows users to say to predefined short statements to automatically generat
 ACLP heavily relies on built-in SpeechRecognizer library to do speech to text operations.
 
 # Future Goals
-The purpose and goal of ACLP is to... 
+The purpose and goal of ACLP is to help anyone learn the fundamentals of computer science.
 
 # Motivation
 
