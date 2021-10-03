@@ -21,4 +21,4 @@ To join the team and contribute please reach out on virajpatel325@gmail.com with
 ACLP is protcted under MIT License, check the "LICENSE" file for more information.
 
 # Contributors
-<a href="https://github.com/viraj325"><img src="https://avatars.githubusercontent.com/u/37918393?v=4" title="Viraj Patel(Lead)" width="60" height="60" style="border-radius:50%"></a>
+<a href="https://github.com/viraj325"><img src="https://avatars.githubusercontent.com/u/37918393?v=4" title="Viraj Patel(Lead)" width="60" height="60"></a>
