@@ -34,12 +34,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:hint="Press the Microphone button to Record"
         android:singleLine="false"
         android:textSize="20sp"
         tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="Enter"
+        tools:ignore="ContentDescription,HardcodedText,PrivateResource" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,4 +85,10 @@
             android:src="@drawable/microphone"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/recentList"/>
 </LinearLayout>

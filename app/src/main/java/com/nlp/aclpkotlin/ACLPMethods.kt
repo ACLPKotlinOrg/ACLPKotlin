@@ -1,6 +1,6 @@
 package com.nlp.aclpkotlin
 
-import java.util.*
+import android.util.Log
 
 /*
  * Notes for processing commands:
@@ -11,32 +11,46 @@ import java.util.*
  * "For $initialValue $comparedValue $inc/dec"
  * "While $initialValue $comparedValue $condition"
  * "Print $value"
- * ""
  * "Return $value"
  * Update $operator $operand $value
+ * Array $name $type $size
  */
 
 /*
 TODO: Create a parser for Python, C++, C, C#, Javascript, Swift
  */
 
+/**
+ * ACLPMethods will contain the main methods for parsing and organizing the commands from the list.
+ */
 class ACLPMethods {
     companion object {
-        var variableList = mutableListOf<String>()
-        //should have methods to load commands depending on language
-        fun treeParser(list: List<KVObject>, index: Int = 0): String{
+        private var variableList = mutableListOf<String>()
+
+        /**
+         * @author Viraj Patel
+         * @param list: List<KVObject>
+         * @param index: Int, default value is 0 for the initial call(Optional)
+         * @return String
+         * @exception list should not be null
+         * treeParser takes the parameters defined above and uses recursion to check the type to set
+         * the result to the equivalent values.
+         */
+        fun treeParser(list: List<KVObject>, index: Int = 0): String {
             return if (index < list.size){
                 var result = ""
                 val item = list[index]
                 if (item.key == index){
                     val splitValue = item.value.split(" ").toTypedArray()
+                    Log.e("skndflknsd", item.value)
+                    item.type = splitValue[0].uppercase()
                     when(item.type){
                         "UPDATE" -> {
                             result = "${splitValue[2]} = ${splitValue[2]} ${parseOperand(splitValue[1])} ${splitValue[3]}"+
                                     treeParser(list, index+1)
                         }
                         "END" -> {
-                            result = "} + \n"// + treeParser(list, index+1) //most likely won't need the second part
+                            result = "} \n"// + treeParser(list, index+1) //most likely won't need the second part
                         }
                         "SET" -> {
                             for (variable in variableList){
@@ -73,7 +87,7 @@ class ACLPMethods {
                                     counter ++
                                 }
                             }
-                            result = "public ${splitValue[splitValue.size - 1]} ${splitValue[1]} ($params){\n" +
+                            result = "public ${splitValue[splitValue.size - 1]} ${splitValue[1]}($params){\n" +
                                     treeParser(list, index+1)
                         }
                         "PRINT" -> {
@@ -135,6 +149,15 @@ class ACLPMethods {
             }
         }
 
+        /**
+         * @author Viraj Patel
+         * @param operand: String
+         * @return String
+         * @exception operand should not be null
+         * @sample operand = "add" -> "+"
+         * @sample operand = "value" -> "value"
+         * parseOperand checks the parameter String operand and returns the equivalent value.
+         */
         private  fun parseOperand(operand: String) : String {
             operand.lowercase()
             return when(operand){
@@ -147,6 +170,16 @@ class ACLPMethods {
             }
         }
 
+        /**
+         * @author Viraj Patel
+         * @param condition: Array<String>
+         * @return String
+         * @exception condition should not be null
+         * @sample condition = ["1", "great", "0"] -> 1>0
+         * @sample condition = ["nor", "isValue"] -> !isValue
+         * parseCondition uses the parameter condition array to return equivalent output,
+         * look at the samples for examples.
+         */
         private fun parseCondition(condition: Array<String>): String{
             var returnString = ""
             for(word in condition){
@@ -164,15 +197,25 @@ class ACLPMethods {
             return returnString
         }
 
+        /**
+         * @author Viraj Patel
+         * @param numberString: String
+         * @return Integer
+         * @exception numberString should not be null
+         * @sample numberString = "three" -> "3"
+         * @sample numberString = "5" -> "5"
+         * parseNumber takes the String value of number and checks for the equivalent digit
+         * if it can't find one within the range, then it returns the original value.
+         */
         private fun parseNumber(numberString: String): Int{
             return if (numberString.toIntOrNull() == null){
                 var numberInt = 0
                 when(numberString.uppercase()){
                     "ONE" -> numberInt = 1
-                    "TWO" -> numberInt = 1
-                    "THREE" -> numberInt = 1
-                    "FOUR" -> numberInt = 1
-                    "FIVE" -> numberInt = 1
+                    "TWO" -> numberInt = 2
+                    "THREE" -> numberInt = 3
+                    "FOUR" -> numberInt = 4
+                    "FIVE" -> numberInt = 5
                 }
                 numberInt
             } else {
@@ -180,11 +223,4 @@ class ACLPMethods {
             }
         }
     }
-}
-
-class KVObject {
-    var id = UUID.randomUUID().toString()
-    var key: Int = 0
-    lateinit var value: String
-    lateinit var type: String
 }
