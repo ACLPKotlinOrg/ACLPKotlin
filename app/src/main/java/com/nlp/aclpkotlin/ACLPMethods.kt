@@ -188,7 +188,7 @@ class ACLPMethods {
          * parseCondition uses the parameter condition array to return equivalent output,
          * look at the samples for examples.
          */
-        private fun parseCondition(condition: Array<String>): String{
+        public fun parseCondition(condition: Array<String>): String{
             var returnString = ""
             for(word in condition){
                 word.lowercase()

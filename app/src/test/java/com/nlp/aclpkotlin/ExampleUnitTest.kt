@@ -13,4 +13,11 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
+    @Test
+    fun testParseConditionGreat() {
+        val arrays = ["1", "great", "3"];
+        String val = ACLPMethods.parseCondition(arrays);
+        assertEquals("1>3", val);
+    }
 }
