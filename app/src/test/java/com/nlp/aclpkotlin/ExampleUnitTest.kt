@@ -20,4 +20,5 @@ class ExampleUnitTest {
         String val = ACLPMethods.parseCondition(arrays);
         assertEquals("1>3", val);
     }
+
 }

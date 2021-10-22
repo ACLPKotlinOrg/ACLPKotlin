@@ -202,7 +202,7 @@ class ACLPMethods {
                     else -> returnString += word
                 }
             }
-            return returnString
+            return returnString0
         }
 
         /**
