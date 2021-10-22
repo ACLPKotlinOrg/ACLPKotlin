@@ -140,6 +140,14 @@ class ACLPMethods {
                             result = "while(${parseCondition(splitValue)}){\n" +
                                     treeParser(list, index+1)// + "\n}"
                         }
+                        "ARRAY" -> {
+                            //Example
+                            //0, 1, 2, 3
+                            //Array $name, $type, $size
+                            //int[] arrayName = new int[size];
+                            result = "${splitValue[2]}[] ${splitValue[1]} = new ${splitValue[2]}[${splitValue[3]}];" +
+                                    treeParser(list, index + 1)
+                        }
                         else -> result = "//Invalid Command: ${item.value}"
                     }
                 }
