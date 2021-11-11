@@ -25,5 +25,8 @@ Viraj Patel(Lead): The Ohio State University
 
 Santosh Gajje: The Ohio State University
 
+Milan Patel: The Ohio State University
+
 <a href="https://github.com/viraj325"><img src="https://avatars.githubusercontent.com/u/37918393?v=4" title="Viraj Patel(Lead)" width="60" height="60"></a>
 <a href="https://github.com/santosh-sy"><img src="https://avatars.githubusercontent.com/u/91912744?v=4" title="Santosh Gajje" width="60" height="60"></a>
+<a href="https://github.com/milan460"><img src="https://avatars.githubusercontent.com/u/84365836?v=4" title="Milan Patel" width="60" height="60"></a>
