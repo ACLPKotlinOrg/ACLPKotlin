@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar
 
 /**
  * The purpose of this activity is to just show the result using textview.
+ * TODO add tab to the lines of text.
  */
 class TextActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
