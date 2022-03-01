@@ -16,9 +16,8 @@ simply press the retry button. The last step is to press on the done button view
 
 # Screenshots
 The first image is going to be where the instructions are being tokenized and are being structured using hashmap. The second image is the output.
-![WhatsApp Image 2022-03-01 at 6 23 20 PM](https://user-images.githubusercontent.com/100733352/156266151-a57a394f-ca3e-445b-9801-15b3b3c6da90.jpeg)
 ![WhatsApp Image 2022-03-01 at 6 23 20 PM (1)](https://user-images.githubusercontent.com/100733352/156266136-acebd0bf-f25b-4ca9-a6a2-72b4b80165f5.jpeg)
-
+![WhatsApp Image 2022-03-01 at 6 23 20 PM](https://user-images.githubusercontent.com/100733352/156266151-a57a394f-ca3e-445b-9801-15b3b3c6da90.jpeg)
 
 # Contribute
 To join the team and contribute please reach out on virajpatel325@gmail.com with suject "ACLPKotlin Contribution Request".
